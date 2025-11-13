@@ -1,0 +1,15 @@
+Module Inherit ke CRM
+Pada form pipeline, tambahkan:
+1. Field Pelanggan Baru dengan tipe Boolean
+2. Field Segment Pelanggan dengan tipe Selection (Konstruksi – Perbankan – Pemerintah –
+BUMD/BUMN – Kementrian – Swasta Lainnya)
+3. Jika yang dipilih di Segment Pelanggan adalah Swasta Lainnya, munculkan field Segment
+Pelanggan Lainnya dengan tipe Char yang harus diisi. Jika tidak, field nya di-hide.
+4. Field Segment Product dengan tipe many2one (Buatkan master data)
+5. Page untuk field Task Progress (One2Many) di Form Pipeline
+Task: Char
+Deadline: Date
+Status: Selection (To do – Progress – Done)
+6. Untuk Segment Product pada soal no. 3, buatkan menu untuk master datanya di
+CRM/Configuration/{nama_menu}
+7. Untuk No. 1 sampai 4, field - field nya disisipkan setelah field Costumer di form pipeline
