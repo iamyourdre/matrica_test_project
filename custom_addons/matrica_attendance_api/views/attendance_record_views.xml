@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_attendance_record_form" model="ir.ui.view">
+            <field name="name">attendance.record.form</field>
+            <field name="model">attendance.record</field>
+            <field name="arch" type="xml">
+                <form string="Attendance Record">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="date"/>
+                            <field name="attendance_type"/>
+                            <field name="longitude"/>
+                            <field name="latitude"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_attendance_record_tree" model="ir.ui.view">
+            <field name="name">attendance.record.tree</field>
+            <field name="model">attendance.record</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance Records">
+                    <field name="date"/>
+                    <field name="name"/>
+                    <field name="attendance_type"/>
+                    <field name="longitude"/>
+                    <field name="latitude"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_attendance_record" model="ir.actions.act_window">
+            <field name="name">Attendance Records</field>
+            <field name="res_model">attendance.record</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_attendance_root"
+            name="Absensi API"
+            sequence="10"/>
+        <menuitem
+            id="menu_attendance_record"
+            name="Attendance Records"
+            parent="menu_attendance_root"
+            action="action_attendance_record"
+            sequence="10"/>
+
+    </data>
+</odoo>
